@@ -1,4 +1,4 @@
-package br.com.jpa.model.dao;
+package br.com.jpa.dao;
 
 import br.com.jpa.connection.ConnectionFactory;
 import br.com.jpa.model.bean.Model;
@@ -7,7 +7,7 @@ import javax.persistence.EntityManager;
 import java.io.Serializable;
 import java.util.List;
 
-public class DAO<T extends Model, I extends Serializable> {
+public abstract class DAO<T extends Model, I extends Serializable> {
 
     private EntityManager manager;
     private Class<T> classPersisted;

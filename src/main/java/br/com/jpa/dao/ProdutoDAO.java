@@ -1,4 +1,4 @@
-package br.com.jpa.model.dao;
+package br.com.jpa.dao;
 
 import br.com.jpa.model.bean.Produto;
 
