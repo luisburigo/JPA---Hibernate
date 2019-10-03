@@ -10,7 +10,8 @@ public class ProdutoTest {
         ProdutoDAO dao = new ProdutoDAO();
         Produto produto = new Produto();
 
-        produto.setDescricao("Budweiser");
+        produto.setId(1);
+        produto.setDescricao("Budweiser - 350ml");
         produto.setQuantidade(10);
         produto.setValor(3.29);
         produto.setCategoria(new CategoriaDAO().findById(1));
