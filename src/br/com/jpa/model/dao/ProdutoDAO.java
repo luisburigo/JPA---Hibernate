@@ -13,7 +13,7 @@ public class ProdutoDAO {
         try {
             manager.getTransaction().begin();
 
-            if (produto.getId() == null){
+            if (produto.getId() == null) {
                 manager.persist(produto);
             } else {
                 manager.merge(produto);
@@ -30,4 +30,18 @@ public class ProdutoDAO {
         return produto;
     }
 
+    public Produto findById(Integer id) {
+        EntityManager manager = new ConnectionFactory().getConnection();
+        Produto produto = null;
+
+        try {
+            produto = manager.find(Produto.class, id);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } finally {
+            manager.close();
+        }
+
+        return produto;
+    }
 }

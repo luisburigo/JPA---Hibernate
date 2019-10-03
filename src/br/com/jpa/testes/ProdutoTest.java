@@ -8,15 +8,11 @@ public class ProdutoTest {
 
     public static void main(String[] args) {
         ProdutoDAO dao = new ProdutoDAO();
-        Produto produto = new Produto();
+        Produto produto = dao.findById(1);
 
-        produto.setId(1);
-        produto.setDescricao("Budweiser - 350ml");
-        produto.setQuantidade(10);
-        produto.setValor(3.29);
-        produto.setCategoria(new CategoriaDAO().findById(1));
-
-        dao.save(produto);
+        System.out.println("Produto ----");
+        System.out.println("Descrição: " + produto.getDescricao());
+        System.out.println("Categoria: " + produto.getCategoria().getDescricao());
     }
 
 }
