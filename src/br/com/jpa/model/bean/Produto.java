@@ -3,7 +3,7 @@ package br.com.jpa.model.bean;
 import javax.persistence.*;
 
 @Entity
-public class Produto {
+public class Produto implements Model {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
